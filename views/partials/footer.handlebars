@@ -1,0 +1,18 @@
+<footer>
+  <div class="footer">
+    <p>Tech Blog</p>
+    <p><span id="current-year"></span> &#169 Egemen Eliz</p>
+    <a href="https://github.com/egemenelz/tech-blog" target="_blank"><img
+        src="./images/GitHub-Mark-32px.png"
+        alt="GithubLogo.png"
+      /></a>
+  </div>
+</footer>
+
+<script>
+  function date(){
+    var date = new Date();
+    return document.getElementById("current-year").innerHTML = date.getFullYear();
+  }
+  date();
+</script>
