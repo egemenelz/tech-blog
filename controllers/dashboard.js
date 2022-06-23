@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { Post, User, Comment } = require("../models");
 const withAuth = require("../utils/auth");
 
-router.get("/", withAuth, (req, res) => {
+router.get("/", (req, res) => {
   Post.findAll({
     where: {
       // use the ID from the session
@@ -27,7 +27,7 @@ router.get("/", withAuth, (req, res) => {
     .then((dbPostData) => {
       // serialize data before passing to template
       const posts = dbPostData.map((post) => post.get({ plain: true }));
-      res.render("dashboard", { posts, loggedIn: true });
+      res.render("dashboard", { posts, loggedIn: req.session.loggedIn, });
     })
     .catch((err) => {
       console.log(err);

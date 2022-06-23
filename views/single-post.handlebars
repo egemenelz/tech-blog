@@ -1,18 +1,22 @@
+<div class="flex">
 {{> post-info post}}
 
 {{!-- {{#if loggedIn}} --}}
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
+<form class="comment-form" style="width: 600px">
+  <div class="form-floating">
+  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="100px"></textarea>
+  <label for="floatingTextarea2">Comments</label>
+</div>
 
-  <div>
-    <button type="button" class="btn btn-outline-primary">Add Comment</button>
+  <div class="text-align-center">
+    <button type="button" class="btn btn-outline-primary ">Add Comment</button>
   </div>
 </form>
 {{!-- {{/if}} --}}
 
 {{> comments post.comments}}
+</div>
+
 
 {{!-- {{#if loggedIn}} --}}
 <script src="/javascript/comment.js"></script>

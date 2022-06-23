@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-
 }
 
 body,
@@ -27,7 +26,6 @@ button {
   cursor: pointer;
   border-radius: 5px;
 }
-
 
 .post-list {
   margin: 0;
@@ -165,10 +163,39 @@ main {
   margin-bottom: 5%;
 }
 
-.footer {
+/* .footer {
   border-top: 1px solid #ccc;
   display: flex;
   justify-content: space-between;
   padding: 1%;
   font-size: 110%;
+} */
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.form-formater{
+  width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer {
+  margin: auto 20px 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-align-center{
+  text-align: center;
 }
