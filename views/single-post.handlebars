@@ -1,7 +1,7 @@
 <div class="flex">
 {{> post-info post}}
 
-{{!-- {{#if loggedIn}} --}}
+{{#if loggedIn}}
 <form class="comment-form" style="width: 600px">
   <div class="form-floating">
   <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="100px"></textarea>
@@ -12,13 +12,13 @@
     <button type="button" class="btn btn-outline-primary ">Add Comment</button>
   </div>
 </form>
-{{!-- {{/if}} --}}
+{{/if}}
 
 {{> comments post.comments}}
 </div>
 
 
-{{!-- {{#if loggedIn}} --}}
+{{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
-{{!-- {{/if}} --}}
+{{/if}}
 

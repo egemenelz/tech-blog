@@ -13,8 +13,8 @@ const hbs = exphbs.create({ helpers });
 const PORT = process.env.PORT || 3001;
 
 // Session object for creating session cookies
-const sess = {
-  secret: "Super secret secret",
+const s = {
+  secret: process.env.SECRET,
   cookie: {},
   resave: false,
   saveUninitialized: true,
@@ -23,7 +23,7 @@ const sess = {
   }),
 };
 
-app.use(session(sess));
+app.use(session(s));
 
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");

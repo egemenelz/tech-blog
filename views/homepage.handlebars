@@ -1,7 +1,13 @@
-<ol class="post-list">
-  {{#each posts as |post|}}
-  <li>
-    {{> post-info post }}
-  </li>
-  {{/each}}
-</ol>
+{{#each posts as |post|}}
+<section class="max-w-4xl m-3 p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
+  <article class="post " >
+    <div class="title flex flex-col">
+      <a href="{{post_url}}" target="_blank">{{title}}</a>
+      <span>({{format_url post_url}})</span>
+    </div>
+    <div class="meta flex justify-end">
+      <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+    </div>
+  </article>
+</section>
+{{/each}}
