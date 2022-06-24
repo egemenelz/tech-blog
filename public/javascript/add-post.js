@@ -2,6 +2,7 @@ async function newFormHandler(event) {
   event.preventDefault();
 
   const title = document.getElementById('title-input').value;
+  const content = document.getElementById('content-input').value;
   const post_url = document.getElementById('link-input').value;
 
   if (title && post_url) {
@@ -9,6 +10,7 @@ async function newFormHandler(event) {
       method: 'POST',
       body: JSON.stringify({
         title,
+        content,
         post_url
       }),
       headers: {

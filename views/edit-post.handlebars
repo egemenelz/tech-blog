@@ -1,5 +1,4 @@
 <article>
-  <a href="/dashboard"> &larr; Back to dashboard</a>
   <div class="max-w-2xl m-3 p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
     <h2>
       Edit Post
@@ -9,29 +8,29 @@
         <input name="post-title" type="text" value="{{post.title}}" />
         <span>({{format_url post.post_url}})</span>
       </div>
-      <div>
-        <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+      <form class="comment-form">
+        <div>
+          <input class="max-w-3xl" name="content-edit">{{content_text}}</input>
+        </div>
+      </form>
+      <div class="flex justify-end">
+        <div>
+          <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+        </div>
       </div>
-      <button type="submit">Save post</button>
-      <button type="button" class="delete-post-btn">Delete post</button>
-    </form>
+      <div class="flex justify-end mt-4">
+        <button class="mr-3" type="submit" id="save-post-btn" class="hover:text-lime-500">Save post</button>
+        <button type="button" id="delete-post-btn" class="hover:text-red-600">Delete post</button>
+      </div>
 
-    <form class="comment-form">
-      <div>
-        <textarea class="max-w-2xl" name="comment-body"></textarea>
-      </div>
-
-      <div>
-        <button type="submit">add comment</button>
-      </div>
     </form>
   </div>
 </article>
 
 
-
-{{> comments post.comments}}
+<div class=" flex justify-center mt-5">
+  {{> comments post.comments}}
+</div>
 
 <script src="/javascript/edit-post.js"></script>
-<script src="/javascript/delete-post.js"></script>
-<script src="/javascript/comment.js"></script>
+<script src="/javascript/delete.js"></script>

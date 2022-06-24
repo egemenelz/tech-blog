@@ -10,10 +10,10 @@ async function deletePostFormHandler(event) {
   });
 
   if (response.ok) {
-    document.location.reload();
+    document.location.replace("/dashboard");
   } else {
     console.log(response.statusText);
   }
 }
 
-document.getElementById("delete-post").addEventListener("click", deletePostFormHandler);
+document.getElementById("delete-post-btn").addEventListener("click", deletePostFormHandler);
