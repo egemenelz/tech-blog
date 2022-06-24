@@ -1,9 +1,12 @@
-<article class="post text-align-center" style="width: 600px">
+<article class="post" style="width: 600px">
   <div class="title">
     <a href="{{post_url}}" target="_blank">{{title}}</a>
     <span>({{format_url post_url}})</span>
   </div>
-  <div class="meta">
-  <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
-</div>
+  <div style="display: flex; flex-direction: column;align-items: flex-end;">
+    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+    <div>
+      <p>{{format_date created_at}}</p>
+    </div>
+  </div>
 </article>
