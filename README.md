@@ -1,6 +1,6 @@
 # E-Commerce Backend
 
-<img src="./public/images/tech-blog.png" alt="Project Image" width="500"/>
+<img src="./public/images/tech-blog.png" alt="Project Image" width="500px"/>
 
 ## License and Badges
 
